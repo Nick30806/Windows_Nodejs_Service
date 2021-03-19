@@ -1,0 +1,36 @@
+<?php
+
+#### Windows  Node.js 轉換成服務掛起 ####
+
+# 目標 : G:\app
+
+# 命令 : npm run "stg"
+
+# 製作 .bat 批次檔案，方便後續掛起執行
+
+--------------------------------------------------------------------------
+                         #### This is app.bat ####
+####------------------------------------------------------------------####
+# cd /d G:\app
+# npm run stg
+--------------------------------------------------------------------------
+
+# 下載工具 nssm.exe      ("https://nssm.cc/release/nssm-2.24.zip")
+
+# 下載完成後解壓縮，例如 G:\Service 
+
+# cmd command  -->  cd /d G:\Servoce\nssm-2.24\win64
+
+# cmd command  -->  nssm.exe install    ( 開啟GUI介面
+
+# 選擇 Path  G:\app\app.bat
+
+# starup directory 會自動帶出
+
+# Service Name  :  "app Service"
+
+# Done !
+
+# 這樣基本上一個 Node.js 就轉成服務了。 nssm 工具在我看裡似乎是一個中介呼叫程式
+
+?>
